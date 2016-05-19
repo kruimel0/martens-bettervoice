@@ -1,0 +1,55 @@
+{
+    "id": "com.martens.bettervoice",
+    "version": "0.0.1",
+    "compatibility": "0.x || 1.x",
+    "name": {
+        "en": "Better Voice",
+        "nl": "Betere Stem"
+    },
+    "description": {
+        "en": "Gives Homey multiple inputs to speak, of which one is chosen at random.",
+        "nl": "Geeft Homey meerdere spraakopties, waarvan er eentje willekeurig wordt gekozen."
+    },
+    "permissions": [
+        "homey:manager:speech-output",
+		"homey:manager:speech-input"
+    ],
+    "flow": {
+		"actions": [
+			{
+				"id": "voice_output",
+				"title": {
+					"en": "Say Something (BV)"
+				},
+				"args": [
+				  {
+					"name": "input",
+					"type": "text",
+					"placeholder": {
+					   "en": "Option 1;Option 2",
+					   "nl": "Optie 1;Optie 2"
+					}
+				  }
+				]
+			}
+		],
+		"conditions": [
+			{
+				"id": "voice_output",
+				"title": {
+					"en": "Ask !{{permission|denial}} (BV)"
+				},
+				"args": [
+				  {
+					"name": "input",
+					"type": "text",
+					"placeholder": {
+					   "en": "Option 1;Option 2",
+					   "nl": "Optie 1;Optie 2"
+					}
+				  }
+				]
+			}
+		]
+	}
+}
