@@ -5,4 +5,3 @@ Let Homey randomly choose one of the multiple sentences you want Homey to say. S
 Example use:
 
 Welcome Home;You are home!;Finally, home!
-"# martens-bettervoice" 
