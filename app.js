@@ -22,8 +22,7 @@ Homey.manager('flow').on('condition.voice_output', function( callback, args ){
 	var arr_t = str.toString().split(';');//Split string at ;
 	var randval=arr_t[Math.floor(Math.random()*(arr_t.length))];//Get a random entry from (0 - array_length)
 	Homey.manager('speech-input').ask(randval, function( err, result ) {
-        if( err ) return Homey.error(err);
-	callback( null, result == 'yes' );
-    });
-	
+        	if( err ) return Homey.error(err);
+		callback( null, result == 'yes' );
+    	});
 });
