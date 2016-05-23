@@ -6,6 +6,11 @@
       "en":"Better Voice",
       "nl":"Betere Stem"
    },
+   "images": {
+      "large": "./assets/images/large.jpg",
+      "small": "./assets/images/small.jpg"
+   },
+   "category": [ "tools" ],
    "description":{
       "en":"Gives Homey multiple inputs to speak, of which one is chosen at random.",
       "nl":"Geef Homey meerdere spraakopties, waarvan er eentje willekeurig wordt gekozen."
