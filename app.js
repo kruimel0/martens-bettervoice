@@ -9,11 +9,11 @@ function init() {
 
 module.exports.init = init
 
-Homey.manager('flow').on('action.voice_output', function( callback, args ){
+Homey.manager('flow').on('action.voice_output', function( callback, args, state ){
 	var str=args.input;
 	var arr_t = str.toString().split(';');//Split string at ;
 	var randval=arr_t[Math.floor(Math.random()*(arr_t.length))];//Get a random entry from (0 - array_length)
-	Homey.manager('speech-output').say( randval );
+	Homey.manager('speech-output').say( randval, {session: state.session} );
 	callback( null, true ); // we've fired successfully
 });
 
